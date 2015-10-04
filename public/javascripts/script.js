@@ -720,10 +720,10 @@ $(document).ready(function() {
 		$('#history').css('height', (((h-100)*0.4) - 10)  + 'px');
 
 		//$('#advertisment').css('width', '280px');
-		var space_height = $('#main').height() - 560;
-		if (space_height < 0)
-			space_height = 0;
-		$('#advertisment .space').css('height', space_height + 'px');
+		//var space_height = $('#main').height() - 560;
+		//if (space_height < 0)
+		//	space_height = 0;
+		//$('#advertisment .space').css('height', space_height + 'px');
 	});
 	$(window).resize();
 

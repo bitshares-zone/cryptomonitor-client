@@ -4,12 +4,12 @@ $(document).ready(function() {
 		$('#current_time').html((new Date).toLocaleString());
 	}, 1000);
 
-	setInterval(function() {
-	   $('#advertisment').children().remove();
-
-	  var rand = Math.floor((Math.random()*100)+1);
-	   $('#advertisment').html("<iframe id='a07de74d' name='a07de74d' src='http://bitminr.de/ads/revive-adserver-3.0.4/www/delivery/afr.php?zoneid=1&amp;cb=" + rand + "' frameborder='0' scrolling='no' width='160' height='600'><a href='http://bitminr.de/ads/revive-adserver-3.0.4/www/delivery/ck.php?n=ac686a4d&amp;cb=" + rand + "' target='_blank'><img src='http://bitminr.de/ads/revive-adserver-3.0.4/www/delivery/avw.php?zoneid=1&amp;cb=" + rand + "&amp;n=ac686a4d' border='0' alt='' /></a></iframe>");
-	}, 30000);
+	//setInterval(function() {
+	//   $('#advertisment').children().remove();
+    //
+	//  var rand = Math.floor((Math.random()*100)+1);
+	//   $('#advertisment').html("<iframe id='a07de74d' name='a07de74d' src='http://bitminr.de/ads/revive-adserver-3.0.4/www/delivery/afr.php?zoneid=1&amp;cb=" + rand + "' frameborder='0' scrolling='no' width='160' height='600'><a href='http://bitminr.de/ads/revive-adserver-3.0.4/www/delivery/ck.php?n=ac686a4d&amp;cb=" + rand + "' target='_blank'><img src='http://bitminr.de/ads/revive-adserver-3.0.4/www/delivery/avw.php?zoneid=1&amp;cb=" + rand + "&amp;n=ac686a4d' border='0' alt='' /></a></iframe>");
+	//}, 30000);
 
 	$("#history").mCustomScrollbar({
         updateOnContentResize: true,
@@ -29,13 +29,16 @@ $(document).ready(function() {
 		var h = $(window).height();
 		var w = $(window).width();
 
+		var ads_box_width = 170;
+		var orderbook_hisotry_box = 280 + 2;
+
 		$('#main').css('height', (h - 88) + 'px');
 
 		$('#charts').css('height', (h-88) + 'px');
-		$('#charts').css('width', (w - 452) + 'px' );
+		$('#charts').css('width', (w - (orderbook_hisotry_box)) + 'px' );
 
 		$('#candle_chart').css('height', (h-90) + 'px');
-		$('#candle_chart').css('width', (w - 452) + 'px');
+		$('#candle_chart').css('width', (w - (orderbook_hisotry_box)) + 'px');
 		$('#candle_chart').empty();
 
 		$('#right_box').css('height', (h-88) + 'px');
@@ -56,10 +59,10 @@ $(document).ready(function() {
 		$('#history').css('height', (((h-100)*0.4) - 10)  + 'px');
 
 		//$('#advertisment').css('width', '280px');
-		var space_height = $('#main').height() - 560;
-		if (space_height < 0)
-			space_height = 0;
-		$('#advertisment .space').css('height', space_height + 'px');
+		//var space_height = $('#main').height() - 560;
+		//if (space_height < 0)
+		//	space_height = 0;
+		//$('#advertisment .space').css('height', space_height + 'px');
 	});
 	$(window).resize();
 
