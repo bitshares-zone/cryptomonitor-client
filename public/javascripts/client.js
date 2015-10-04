@@ -112,7 +112,7 @@ $(document).ready(function() {
 			$('.indicator_ma').addClass('current');
 	}
 
-	var socket = io.connect('http://85.114.132.118:3000/');
+	var socket = io.connect('http://bitshares-zone.com:3000/');
 
   	socket.on('connect', function () {
 	    $('#info').html("Connected to server.");
